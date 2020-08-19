@@ -1,0 +1,6 @@
+crerte new repo in github:
+-git init
+set up k8s cluster on gcp:
+- gcloud container clusters create echocluster
+- region;europe-west2-a 
+
