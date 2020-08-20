@@ -34,3 +34,14 @@ helm chart:
 
 //check the mongodb
 -kubectl exec -it mongodb-mongodb-replicaset-0 -- mongo mydb -u admin -p password --authenticationDatabase admin
+
+--------------------------------------------------------------------------
+In the new git repo, create two new branches: 'dev' and 'staging'
+//create
+-git checkout -b dev
+-git checkout -b staging
+//push
+-git push -u origin staging
+-git push -u origin dev
+
+--------------------------------------------------------------------------
