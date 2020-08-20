@@ -6,6 +6,7 @@ pipeline{
         stage("build"){
             steps{
                 echo '========================= Executing Build Stage =========================================='
+                sh 'ls -R'
                 dir("./mychrat"){
                     sh 'ls'
                     echo 'Verify success!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
