@@ -2,14 +2,14 @@ pipeline{
     agent any
     // tools{
     // }
-    triggers{
-        github(
-            triggerOnPush: true,
-            triggerOnMergeRequest: true,
-            branchFilterType: 'All',
-            addVoteOnMergeRequest: true
-        )
-    }
+    // triggers{
+    //     github(
+    //         triggerOnPush: true,
+    //         triggerOnMergeRequest: true,
+    //         branchFilterType: 'All',
+    //         addVoteOnMergeRequest: true
+    //     )
+    // }
     // environment {
 
     // }
