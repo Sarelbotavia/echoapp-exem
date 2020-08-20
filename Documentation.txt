@@ -1,6 +1,36 @@
 crerte new repo in github:
+#create new repo on guthub and clone.
 -git init
-set up k8s cluster on gcp:
-- gcloud container clusters create echocluster
-- region;europe-west2-a 
+-git add .
+-git commit -m 'initial echo app project-exem'
+-git remote add origin git@github.com:Sarelbotavia/echoapp-exem.git
+-git push -u origin master
 
+-----------------------------------------------------------------------
+set up k8s cluster on gcp for echoapp:
+- gcloud container clusters create echocluster
+- region - europe-west2-a 
+
+-----------------------------------------------------------------------
+jenkins:
+-create instance ubuntu on gcp
+-connect and run:
+    sudo apt-get update
+    sudo apt install docker.io
+    sudo chmod 666 /var/run/docker.sock
+    docker run --name jenkins -d -v jenkins_home:/var/jenkins_home -p 80:8080 jenkins/jenkins:lts
+    // get the password for jenkins
+    docker exec -it jenkins bash 
+    cat /var/jenkins_home/secrets/initialAdminPassword
+
+download all plugin -> docker , multibranch pipeline , github
+
+------------------------------------------------------------------------
+helm chart:
+-kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v0.14.1/cert-manager.crds.yaml
+-helm install mongodb mongodb-replicaset-3.8.7
+-helm install nginx-ingress nginx-ingress-1.41.2 
+-helm install echoapp mychart 
+
+//check the mongodb
+-kubectl exec -it mongodb-mongodb-replicaset-0 -- mongo mydb -u admin -p password --authenticationDatabase admin
