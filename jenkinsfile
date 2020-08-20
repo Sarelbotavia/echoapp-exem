@@ -25,7 +25,7 @@ pipeline{
         }
         // stage("test1"){
         //     steps{
-        //         echo '======================== Executing test1 Stage =========================================='
+        //         echo '======================== Executing test1 Stage ======================================='
         //         sh 'curl app:9191'
         //     }
         // stage("getGitCommit"){
