@@ -7,8 +7,8 @@ pipeline{
             steps{
                 echo '========================= Executing Build Stage =========================================='
                 sh 'ls -R'
-                dir("./mychrat"){
-                    sh 'ls'
+                dir("./echo"){
+                    sh 'docker build -t app .'
                     echo 'Verify success!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
                 }
             }
